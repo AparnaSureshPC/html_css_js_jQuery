@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('#hide').click(function(){
+                $('h1').hide()
+            })
+            $('#show').click(function(){
+                $('h1').show(1000)
+            })
+           $('#hideshow').click(function(){
+              $('h1').toggle()
+           })
+
+           $("#fadein").click(function(){
+            $('#div1').fadeIn()
+            $('#div2').fadeIn("slow")
+            $("#div3").fadeIn(3000)
+           })
+           $('#fadeout').click(function(){
+            $('#div11').fadeOut()
+            $('#div12').fadeOut('slow')
+            $('#div13').fadeOut(3000)
+           })
+           $('#toggle').click(function(){
+            $('#div11').fadeToggle()
+            $('#div12').fadeToggle('slow')
+            $('#div13').fadeToggle(3000)
+           })
+           $('#fade').click(function(){
+        $('#div11').fadeTo("slow",0.13)
+        $('#div12').fadeTo('slow',0.12)
+        $('#div13').fadeTo('slow',0.12)
+           })
+
+           $('.slideup').click(function(){
+            $('#p1').slideUp()
+           })
+           $('.slidedown').click(function(){
+            $('#p2').slideDown()
+           })
+           $('.up_down').click(function(){
+            $('#p3').slideToggle()
+           })
+           $('#animation').click(function(){
+            $('#div_animate').animate({right: '500px'}, "slow");
+            $('#div_animate').animate({fontSize:'4em',text})
+           })
+        }
+        )
+    </script>
+    <style>
+        #div_animate,.up_down,#p2{width:200px;border:solid #c3c3c3 1px;}
+        #div_animate{background-color: #c3c3c3;height:200px;width:300px;position:absolute}
+        
+    </style>
+</head>
+<body>
+    <h1>hello</h1>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <button id="hideshow">hide/show</button>
+    
+    <button id="fadein">fade_in</button>
+    <button id="fadeout">fade_out</button>
+    <button id="toggle">fadein_fadeout</button>
+    <button id="fade">to_fade_boxes</button>
+    <br><br>
+    <div id="div1"style="height:80px;width:80px;background-color:red;display:none"> </div><br>
+    <div id="div2"style="height:80px;width:80px;background-color:pink;display:none"></div><br>
+    <div id="div3"style="height:80px;width:80px;background-color:blue;display:none"></div><br>
+    <div id="div11"style="height:80px;width:80px;background-color:red;"> </div><br>
+    <div id="div12"style="height:80px;width:80px;background-color:pink;"></div><br>
+    <div id="div13"style="height:80px;width:80px;background-color:blue;"></div><br>
+    
+    <button  class="slideup">slideup</button>
+    <button  class="slidedown">slidedown</button>
+    <p id="p1">hi there</p><br>
+    <div id="p2"style="padding:50px;display:none">welcome</div>
+    <div class="up_down">toggle</div>
+    <div id="p3"style="padding:50px;">nice to meet you</div>
+
+    <button id="animation">animation</button>
+    <div id="div_animate">jQuery</div>
+</body>
+</html>

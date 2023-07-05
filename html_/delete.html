@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+     .base{margin:auto;border:5px solid white ;
+        background-color:rgb(11, 237, 237);
+       text-align: center;
+        width:1000px;height:700px;
+        margin-top:10px;
+    }
+
+    .innerp{
+    background-color:white;
+    margin:auto;font-size :15px ;
+    width:900px;height:540px;padding:10px;
+    
+    } 
+ #l1{right:350px;position: absolute;}
+ input,select{left:500px;position:absolute ;}
+ #l2,#l3{left:520px;position:absolute}
+ .double{width: 290px;}
+ .maybe{margin-bottom:10px;margin-top:10px;}
+ .not_sure{margin-bottom:10px;margin-top:10px;color:red}
+</style>
+</head>
+<body>
+    <div class="base"><h1 class="content" id="head">Survey Form</h1>
+    <div class="innerp"><p class="content">Let us know how we can improve the freeCodeCamp</p>
+    <form action="">
+        <div><label id="l1" >* Name </label><input type="text" name="naming" placeholder="Enter your name"/></div><br><br>
+        <div><label id="l1">* Email </label><input type='text' name='email' placeholder="Enter your email"/></div><br><br>
+        <div><label id="l1">* Age </label><input type="number" min="1" max="30" placeholder="Age"></div><br><br>
+        <div><label id="l1">Which option best describes your current role? </label><select name="" id="">
+            <option>student</option>
+            <option>employee</option>
+        </select></div>
+        <br><br>
+        <div><label id="l1" class="double">* How likely is that would you recommend freeCodeCamp to your friend? </label>
+         <input type ='radio' id="definitely" value="Definitely"><label for="definitely" id="l2">Definitely</label><br>
+         <input type ='radio' id="maybe" value="Maybe"><label for="maybe" id="l2" class="maybe">Maybe</label><br>
+         <input type ='radio' id="not sure" value="Not sure"><label for="not_sure" id="l2" class="not_sure">Not sure</label></div><br><br>
+        <div><label id="l1">What do you like most in FCC? </label><select name="" id="">
+            <option value="">Select an option</option>
+            <option value="">easy coding</option>
+        </select></div><br><br>
+        <div><label id="l1" class="double">Things that should be improved in future. Check all that apply:</label>
+        <input type="checkbox"/><label id="l3">Front end Projects</label><br>
+        <input type="checkbox"/><label id="l3">Back end Projects</label><br>
+        <input type="checkbox"/><label id="l3">Data Visualization</label><br>
+        </div>
+        </form>
+    </div>
+    
+</div>
+</body>
+</html>

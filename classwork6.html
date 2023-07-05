@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYLE>
+        body{text-align:center;}
+        .outerbody{margin:auto;border:3px solid rgb(19, 205, 205);
+            width:900px;height:700px;}
+        .innerbody{margin:auto;border:3px solid rgb(237, 225, 225);background-color:white;
+            width:750px;height:600px;}
+        #l1{right:400px;position :absolute}
+        input,select{left:450px;position:absolute}
+        #l2,#l3{left:480px;position:absolute}
+        .double{width:300px;left:140px;position:absolute;text-align: right;}
+        .double1{width:300px;left:150px;left:140px;position:absolute;text-align: right;}
+    </STYLE>
+</head>
+<body>
+    <div class="outerbody"><h1>SURVEY FORM</h1>
+    <div class="innerbody"><p>Let us know how we can improve the freeCodeCamp</p>
+    <form action="">
+      <div><label id="l1">Name </label><input type="text" placeholder="enter your name"></div><br> <br>
+      <div><label id="l1">Email </label><input type="text" placeholder="enter your email"></div><br><br>
+      <div><label id="l1">Age </label><input type="number" min="1" max="30"></div><br><br>
+      <div><label id="l1">Describe your current role </label><select >
+        <option value="">student</option>
+        <option value="">employee</option>
+      </select></div><br><br>
+      <div><label id="l1" class="double">How likely Would you recommend freeCodeCamp to your friend</label><input type="radio"><label id="l2">Definitely</label><br>
+     <input type="radio"><label id="l2">Maybe</label><br>
+    <input type="radio"><label id="l2">Not sure</label>
+    </div><br><br>
+    <div><label id="l1">What do you like the most in FCC </label><select>
+        <option value="">Select an option</option>
+        <option value="">easy coding</option>
+    </select></div><br><br>
+    <div><label id="l1" class="double1">Things that should be improved in the future Check all that apply</label><input type="checkbox"><label id="l3">Front end Projects</label><br>
+        <input type="checkbox"><label id="l3">Back end Projects</label><br>
+        <input type="checkbox"><label id="l3">Data Visualisation</label>
+    </div>
+    
+    </form>
+    
+    </div>
+         
+</div>
+</body>
+</html>

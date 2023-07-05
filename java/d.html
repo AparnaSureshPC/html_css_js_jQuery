@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="button" value="5">
+    <input type="button" id="button" value="6">
+    <input type="button" id="button" value="+">
+    <input type="button" id="button" value="=">
+     
+     <input type="text" id="input">
+     <button onclick="add()"></button> 
+      <p id="content"></p>
+    <script>
+      
+        var button = document.querySelectorAll("#button")
+      for (i=0;i<button.length;i++){ 
+button[i].addEventListener("click", function(e){
+    document.getElementById("input").value +=e.target.value})
+      }
+      
+      function add(){
+       var input=document.getElementById("input")
+      document.getElementById('content').innerHTML=input.value
+      }
+
+    </script>
+
+    
+    
+</body>
+</html>

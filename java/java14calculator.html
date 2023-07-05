@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mainbody{border:1px solid rgb(218, 214, 214);width: 180px;height:180px;box-shadow:2px 2px rgb(224, 219, 219);}
+         #innerbody{padding-top:6px}
+         button{width:40px}
+         .operators{display: inline-block;padding-top:6px}
+    </style>
+</head>
+<body>
+    <div id="mainbody">
+        <input id="input"><br>
+        <div >
+            <div  class="operators">
+                <input type="button" value="+">
+            <input type="button" value="-">
+            <input type="button" value="*">
+            <input type="button"value="/">
+            </div>
+        <div id="numbers">
+            <input type="button"value="7">
+            <input type="button"value="8">
+            <input type="button"value="9"><br>
+            
+        </div>
+       
+        <div id="numbers">
+            <input type="button"value="4">
+            <input type="button"value="5">
+            <input type="button"value="6"><br>
+        </div>
+        <div id="numbers">
+            <input type="button"value="1">
+            <input type="button"value="2">
+            <input type="button"value="3"><br>
+        </div>
+        <div id="numbers">
+            <input type="button"value="0">
+            <input type="button"value=".">
+            <div id="clear"><input type="button"value="C"></div><br>
+        </div>
+    </div>
+    <div class="operators"style="top:60px;left:140px;position:absolute;"><button style="height:104px"type ="button" style="background-color: rgb(0, 191, 255);">=</button></div>
+    </div>
+    <script>
+       
+       let input=document.getElementById('input').value 
+       numbers =document.querySelectorAll('.numbers')
+       for (var i=0;i<numbers.length;i++){numbers[i].addEventListener('click',onclick(e))}
+       function onclick(e){
+        if (e.target.type == 'button')
+                    {
+                        switch (e.target.value){
+                            case numbers[0]:
+                               input= numbers[0]
+                                break;
+                            default:
+                                document.getElementById('input').innerHTML=' '
+                        }
+        
+       }
+    }
+    </script>
+</body>
+</html>

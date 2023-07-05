@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=., initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $(document).ready(function(){
+    // $('#progressbar').progressbar({value:37})
+    var val=0
+    $('#upload').click(function(){
+        
+        var interval=setInterval(function(){
+            val++
+            $('#progressbar').progressbar({value:val})
+            $('#pbar').html(val)
+            if (val==10){
+               clearInterval(interval)
+            }
+        },1000)
+    })
+    
+    $('#percent').click(function(){
+      var val_=0
+      setInterval(function(){
+            
+            $('#progress_bar').progressbar({value:val_})
+            $('#p_bar_2').html(val_)
+           
+        },1000)
+
+    })
+    $('#text').keyup(function(){
+                        var count_=$('#text').val().length
+
+                    $('#p_bar_3').html(count_)
+                    $('#pbar3').progressbar({value:count_})
+                 })
+       var val__ =0
+      $('#on_clicking').click(function(){
+        
+        val__++
+        $('#pbar4').progressbar({value:val__})
+        $('#p_bar_4').html(val__)
+      })
+                 
+                    
+
+
+  })
+  </script>
+</head>
+<body>
+    <div id="progressbar"></div><span id="pbar"></span><br>
+    <button id="upload">upload</button><br>
+    <button id="percent">percent</button>
+    <div id="progress_bar"></div><span id="p_bar_2"></span><br>
+    <textarea name="" id="text" cols="30" rows="10"></textarea>
+    <div id="pbar3"></div><span id="p_bar_3"></span>
+    <br>
+    <br>
+    <button id="on_clicking">on_clicking</button>
+    <div id="pbar4"></div><span id="p_bar_4"></span>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo" onclick="f('hello')"></h1>
+    
+    <script>
+        //    var car=['zen','800','swift']
+        //    let txt=''
+        //    for(let i=0;i<car.length;i++){
+        //     txt+=car[i]
+        //    }
+        //    document.getElementById('demo').innerHTML=txt
+    // var person={name:'ami',age:"24",loctn:"calicut"}
+    // let txt=""   
+    // for(i in person){
+    //   txt+=' '+i
+    // }
+    // document.getElementById('demo').innerHTML=txt
+
+    var person={name:'ami',age:"24",loctn:"calicut"}
+    let txt=""
+    for(i in person){
+      txt+=' '+person[i]
+    }
+    document.getElementById('demo').innerHTML=txt
+    function f(wish){
+        document.getElementById('demo').innerHTML=wish
+    }
+
+
+    </script>
+</body>
+</html>

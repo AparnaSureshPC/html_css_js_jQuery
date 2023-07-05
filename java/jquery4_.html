@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+              $('#divide1').prop('disabled',true)
+        // $('#divide1').click(function(){
+        //     alert('hi')
+        $(this).click(function(){
+            $('#divide1').prop('disabled',false)
+        })            
+        // $("#input_").focus(function(){
+                   
+        //            var value_=$("#input_").val()
+        //          if(value_<=10){
+        //            $("#input_").css('background-color','grey')
+        //          }
+                   
+        //         }) 
+               $("#input_").focus(function(){
+                   
+                   var value_=Number($("#input_").val())
+                  
+                 if(value_<=10){
+                   $("#input_").removeClass('error').addClass('right')
+                 }
+                   
+                })      
+         
+    
+                $("#input_").blur(function(){
+                   
+                    var value_=Number($("#input_").val())
+                    console.log(typeof value_)
+                    console.log(value_)
+                  if(value_>10){
+                    $("#input_").removeClass('right').addClass('error')
+                  }
+                    
+                 }) 
+
+                
+                 $('#text3').keyup(function(){
+                        var count_=$('#text3').val().length
+
+                    $('#display__').html(count_)
+                 })
+                 $('#progress_bar').progressbar({value:90})
+                    
+    })
+  
+    </script>
+    <style>
+        .right{background-color: grey;}
+         .error{border:red;background-color:yellow}
+    </style>
+</head>
+<body>
+<button id="divide1" style='background-color:red'>+</button>
+
+<input type="text"id='input_'><br><br>
+
+
+<textarea id="text3" cols="30" rows="10"></textarea>
+  <div id="display__"style="display:inline"></div>
+  <div id="progress_bar"style="display:inline"></div><br><br>
+  
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1 ID="head" onclick="g()">form</h1>
+   
+    <form action="">
+        <label for="">enter day</label>
+    <input type="text" id="day">
+    <button type ="button" onclick="f()">submit</button>
+    <p id="para"></p>
+    </form>
+    <script>
+       function g(){
+       
+        
+        document.getElementById("head").innerHTML='mon'
+       }
+
+        function f(){
+        let day=document.getElementById("day").value
+        console.log(day)
+        switch(day){
+            case 'mon':
+                console.log('start')
+             break
+            case 'wed':
+                console.log('mid') 
+            break
+            case 'sat':
+                console.log('end') 
+            break
+            default :
+            console.log('anyday') 
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+h1{color:blue;background-color:aquamarine }
+p{font-size: 20px;}
+*{background-color: black;}
+.next{font-style: italic;}
+p,#id1,.next{font-weight:bold;background-color:white}
+#id1{color: rgb(23, 23, 184);}
+#id2{color: rgb(216, 78, 14);}
+.current{color:rgb(10, 245, 163);}
+#second{color: rgb(194, 194, 29);}
